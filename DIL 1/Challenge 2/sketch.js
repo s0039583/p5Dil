@@ -1,22 +1,30 @@
-let pipe1, pipe2, bird, floor;
-
 function setup() {
   x = 600;
   y = 400;
-  createCanvas(x, y);
-  world.gravity.y = 10;
-floor = new Sprite(x/2,y,x,2,"s")
-  pipe1 = new Sprite(150,50,25,100,"s");
-  pipe2 = new Sprite(150,300,25,200,"s");
-  pipe1.color = "green";
-  pipe2.color = "green";
+  createCanvas(x,y);
+  displayMode('centered');
 
-  bird = new Sprite(0,y/2,50,50,"d");
-  bird.image = "🐥"
-  bird.vel.x = 2;
+  ceiling = new Sprite(x/2, 0, x, 2, "s");
+  bottom = new Sprite(x/2, y, x, 2, "s");
+  left = new Sprite(0, y/2, 2, y, "s");
+  right = new Sprite(x, y/2, 2, y, "s");
+  ceiling.color = "black";
+  bottom.color = "black";
+  left.color = "black";
+  right.color = "black";
 
+  logo = new Sprite(x/2, y/2, 100, 75, "d");
+  logo.text = "DVD";
+  logo.vel.y = 1;
+  logo.vel.x = 1;
+  logo.direction.x = 1;
+  logo.direction.y = 1;
+  //logo.bounciness = 1;
+  logo.rotationLock = true;
 }
 
 function draw() {
-  background('skyblue');
+  background(0);
+
+
 }
