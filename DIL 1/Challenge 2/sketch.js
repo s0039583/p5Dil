@@ -17,7 +17,7 @@ function setup() {
   dvd.h = 80;
   dvd.vel.y = 3;
   dvd.vel.x = 1;
-  logo.rotationLock = true;
+  dvd.rotationLock = true;
 }
 
 function draw() {
